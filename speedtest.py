@@ -6,6 +6,8 @@ import mysql.connector
 
 db = mysql.connector.connect(user='scripts', password='scriptpass', host='localhost', db='speed')
 
+# code from https://pimylifeup.com/raspberry-pi-internet-speed-monitor/
+# code has been modified
 response = subprocess.Popen('/usr/bin/speedtest', shell=True, stdout=subprocess.PIPE).stdout.read().decode('utf-8')
 
 ping = re.search('Latency:\s+(.*?)\s', response, re.MULTILINE)
