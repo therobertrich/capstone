@@ -4,7 +4,7 @@ import subprocess
 import time
 import mysql.connector
 
-db = mysql.connector.connect(user='scripts', password='scriptpass', host='localhost', db='speed')
+db = mysql.connector.connect(user='remote', password='password', host='192.168.1.200', db='speed')
 
 # code from https://pimylifeup.com/raspberry-pi-internet-speed-monitor/
 # code has been modified
